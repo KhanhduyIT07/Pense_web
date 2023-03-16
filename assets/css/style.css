@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@600;700&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 3rem;
+  --font-semi: 400;
+  --font-bold: 900;
+}
+
+/*===== Colores =====*/
+:root {
+  --first-color: #ff7235;
+  --white-color: #fafaff;
+  --dark-color: #101010;
+  --dark-color-light: #606060;
+  --gray-color: #f0f1f3;
+}
+/*===== Fuente y tipografia =====*/
+:root {
+  --font-main: "Hind Siliguri", sans-serif;
+  --big-font-size: 2rem;
+  --h1-font-size: 1.8rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.9rem;
+}
+/*===== Margenes =====*/
+:root {
+  --mb-1: 0.5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+}
+/* 1rem = 10px */
+
+/*===== z index =====*/
+:root {
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*===== BASE =====*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* muot hon khi click next page */
+}
+
+body {
+  /* tren 3 rem duoi 0 trai 0 phai 0 */
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--font-main);
+  font-size: var(--normal-font-size);
+  color: var(--dark-color);
+  line-height: 1.6;
+
+  /* khoan cach giua dong tren va duoi */
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* class css */
+.section {
+  /* background-color: yellow; */
+  padding: 3rem 0.5rem;
+  /* padding tren duoi 30px trai phai 0px */
+}
+.section-title {
+  font-size: var(--h2-font-size);
+  color: var(--dark-color);
+  margin: var(--mb-4) 0 var(--mb-1);
+  text-align: center;
+  letter-spacing: 0rem;
+  text-transform: capitalize;
+}
+.section-all {
+  display: block;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi);
+  text-align: center;
+  margin-bottom: var(--mb-2);
+  text-transform: capitalize;
+  font-family: var(--title-font);
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(62, 158, 231);
+}
+.bd-grid {
+  /* background-color: cadetblue; */
+  max-width: 1024px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-column-gap: 2rem;
+  width: calc(100% - 3rem);
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
+}
+.D-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--gray-color);
+  display: flex;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .nav__menu {
+    position: fixed;
+    top: var(--header-height);
+    right: -100%;
+    width: 80%;
+    height: 100%;
+    background-color: var(--white-color);
+    transition: 0.5s;
+    text-align: center;
+  }
+  .nav__item {
+    margin-bottom: var(--mb-3);
+    font-size: var(--font-bold);
+  }
+  .nav__link {
+    color: var(--dark-color);
+  }
+  .nav__link:hover {
+    color: var(--second-color);
+  }
+  .nav__logo {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    color: #183b56;
+    font-size: 25px;
+  }
+  .nav__logo img {
+    width: 30%;
+  }
+  .nav__logo p {
+    margin-left: 5px;
+    font-family: var(--font-main);
+    color: var(--dark-color);
+  }
+
+  .button {
+    display: none;
+  }
+  .nav__toggle {
+    margin-top: 5px;
+    font-size: 2.3rem;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+  }
+  .show {
+    right: 0px;
+  }
+  .active {
+    color: var(--second-color);
+  }
+  .total {
+    bottom: 0;
+    width: 50%;
+  }
+}
+.home__container {
+  height: calc(100vh - var(--header-height));
+  /* background-color: #183b56; */
+}
+.home__data {
+  padding-top: 2rem;
+  font-size: var(--big-font-size);
+  font-weight: var(--font-bold);
+  line-height: 1.3;
+}
+.home__data p {
+  font-weight: var(--font-semi);
+  font-size: var(--normal-font-size);
+  color: var(--dark-color-light);
+  opacity: 70%;
+  margin-bottom: var(--mb-2);
+}
+.button__ti {
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+.button__ti p {
+  margin-left: 10px;
+  font-size: 12px;
+}
+.home__button {
+  padding: 12px;
+  font-size: var(--small-font-size);
+  background-color: #ff7235;
+  border-radius: 5px;
+  font-weight: var(--font-semi);
+  color: #f0f1f3;
+  margin-bottom: var(--mb-3);
+}
+
+.overview__container {
+  margin-bottom: var(--mb-4);
+}
+.sticker__container {
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 1rem;
+  padding: 1rem 0;
+  margin-bottom: var(--mb-4);
+}
+.sticker__logo {
+  display: flex;
+  justify-content: center;
+}
+.sticker__logo img {
+  width: 70%;
+}
+.sticker__logo:hover {
+  transform: translateY(-0.5em);
+}
+
+/*  */
+
+/* .realTime__container {
+  grid-template: 2rem;
+} */
+.realTime__data span {
+  text-transform: uppercase;
+  font-size: 20px;
+  color: var(--dark-color-light);
+}
+.realTime__title {
+  font-size: var(--big-font-size);
+  line-height: 1;
+}
+.realTime__title p {
+  margin-top: var(--mb-2);
+  font-size: var(--small-font-size);
+  color: var(--dark-color-light);
+  opacity: 70%;
+}
+.realTime__title a {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 200;
+  color: red;
+  opacity: 70%;
+  margin-top: var(--mb-3);
+}
+/* save */
+.save__data span {
+  text-transform: uppercase;
+  font-size: 20px;
+  color: var(--dark-color-light);
+}
+.save__title {
+  font-size: var(--big-font-size);
+  line-height: 1;
+  margin-bottom: var(--mb-2);
+}
+.save__title p {
+  margin-top: var(--mb-2);
+  font-size: var(--small-font-size);
+  color: var(--dark-color-light);
+  opacity: 70%;
+}
+.save__title a {
+  margin-top: var(--mb-2);
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 200;
+  color: red;
+  opacity: 70%;
+}
