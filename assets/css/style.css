@@ -388,7 +388,29 @@ img {
   border: 1px solid red;
   border-radius: 5px;
 }
-
+/* .slider */
+.slider__container {
+  margin: 12px;
+  /* background-color: #ff7235; */
+}
+.Slider__box {
+  padding: 10px;
+  border-top: 10px solid rgb(6, 255, 118);
+  border-radius: 10px;
+}
+.slider__user {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+}
+.slider__img {
+  margin-right: 10px;
+}
+.slider__user span {
+  margin-left: 5px;
+  color: var(--dark-color-light);
+  opacity: 70%;
+}
 @media screen and (min-width: 768px) {
   body {
     margin: 0;
