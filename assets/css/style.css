@@ -85,8 +85,7 @@ img {
 }
 /* class css */
 .section {
-  /* background-color: yellow; */
-  padding: 3rem 0.5rem;
+  padding: 3rem 0.3rem;
   /* padding tren duoi 30px trai phai 0px */
 }
 .section-title {
@@ -111,13 +110,13 @@ img {
 }
 .bd-grid {
   /* background-color: cadetblue; */
-  max-width: 1024px;
+  max-width: 1020px;
   display: grid;
   grid-template-columns: 100%;
   grid-column-gap: 2rem;
   width: calc(100% - 3rem);
-  margin-left: var(--mb-2);
-  margin-right: var(--mb-2);
+  margin-left: var(--mb-3);
+  margin-right: var(--mb-1);
 }
 .D-header {
   width: 100%;
@@ -389,6 +388,66 @@ img {
   border-radius: 5px;
 }
 
+.slider__container {
+  /* background-color: #ff7235; */
+}
+.Slider__box {
+  padding: 10px;
+  border-top: 10px solid rgb(6, 255, 118);
+  border-radius: 10px;
+  margin-bottom: var(--mb-2);
+}
+.slider__user {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+}
+.slider__img {
+  margin-right: 10px;
+}
+.slider__user span {
+  margin-left: 5px;
+  color: var(--dark-color-light);
+  opacity: 70%;
+}
+.Slider__box p {
+  font-size: var(--small-font-size);
+}
+/* footer */
+.footer {
+  background: var(--bgr-main);
+  color: var(--dark-color-light);
+}
+.footer__container {
+  row-gap: 1rem;
+  margin-bottom: var(--mb-3);
+}
+.footer__title {
+  margin-bottom: var(--mb-1);
+}
+.footer__deal {
+  margin-bottom: var(--mb-2);
+}
+
+.footer__link,
+.footer__socical {
+  color: var(--dark-color-light);
+  font-family: var(--title-font);
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+.footer__socical {
+  font-size: 1.3rem;
+  margin-right: var(--mb-1);
+}
+.footer__copy {
+  border-top: 1px solid white;
+  padding-top: 1rem;
+  text-align: center;
+  color: tomato;
+  font-size: var(--small-font-size);
+}
 @media screen and (min-width: 768px) {
   body {
     margin: 0;
@@ -424,7 +483,6 @@ img {
   }
   #nav-toggle {
     display: none;
-    background-color: #ff5a1f;
   }
   .home {
     position: relative;
@@ -465,6 +523,16 @@ img {
   /* buy */
   .buy__data {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .slider__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  /* footer */
+  .footer__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .footer__container {
+    padding: 2rem 0;
   }
 }
 @media screen and (min-width: 1024px) {
